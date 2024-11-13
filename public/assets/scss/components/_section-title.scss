@@ -1,0 +1,35 @@
+@use "../utils" as *;
+
+.ts-section {
+  &-subtitle {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: var(--ts-theme-color-2);
+    margin-bottom: 10px;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: var(--ts-theme-color-2);
+      display: inline-block;
+      margin-right: 10px;
+      transform: translateY(-2px);
+    }
+  }
+
+  &-title {
+    text-transform: uppercase;
+    &-white {
+      color: var(--ts-white);
+    }
+    @media #{$lg-m} {
+      font-size: 54px;
+    }
+    @media #{$md-m} {
+      font-size: 40px;
+    }
+  }
+}

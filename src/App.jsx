@@ -1,13 +1,23 @@
 
 import './App.css'
-import Footer from './components/Footer'
 import Header from './components/Header'
+import Footer from './components/Footer'
+// import Hero from './components/hero'
+// import About from './components/About'
+// import Food from './components/Food'
 
 function App() {
 
+  
+
   return (
     <>
-      <Header/>
+      <Header />
+
+      {/* <Hero />
+      <About />
+      <Food /> */}
+      
       <Footer/>
     </>
   )

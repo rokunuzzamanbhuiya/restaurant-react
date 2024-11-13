@@ -1,6 +1,6 @@
 
 
-const hero = () => {
+const Hero = () => {
     return (
         <div>
            <h1>hero</h1> 
@@ -8,4 +8,4 @@ const hero = () => {
     );
 };
 
-export default hero;
+export default Hero;
