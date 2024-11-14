@@ -7,6 +7,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Food from './components/Food'
 import Book from './components/Book'
+import Testimonial from './components/Testimonial'
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <About />
       <Food />
       <Book />
+      <Testimonial />
 
       
       <Footer/>
