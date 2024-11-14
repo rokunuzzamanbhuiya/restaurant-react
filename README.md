@@ -1,7 +1,7 @@
 # Restaurant React
 
 **Application Live Link** <br>
-https://res-taurant-react.netlify.app/
+https://res-tau-rant-react.netlify.app
 
 A Modern and Responsive web application designed to provide a delightful food experience. This Website was built with React and includes various UI/UX enhancements using Bootstrap, Sass.
 
