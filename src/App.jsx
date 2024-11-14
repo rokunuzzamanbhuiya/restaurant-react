@@ -8,6 +8,7 @@ import About from './components/About'
 import Food from './components/Food'
 import Book from './components/Book'
 import Testimonial from './components/Testimonial'
+import Blog from './components/Blog'
 
 
 
@@ -22,7 +23,7 @@ function App() {
       <Food />
       <Book />
       <Testimonial />
-
+      <Blog />
       
       <Footer/>
     </>
