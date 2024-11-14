@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
         <>
-            <footer id="footer" className="ts-footer-bg ts-bg-img-cover pt_120 pb_100" data-background="assets/img/footer/footer.jpg">
+            <footer id="footer" className="ts-footer-bg pt_120 pb_100">
             <div className="ts-section-title-wrapper text-center mb_40">
                 <h2 className="ts-section-title ts-section-title-white">We ready to have you the best dining experiences</h2>
             </div>

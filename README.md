@@ -14,7 +14,7 @@ A modern and responsive web application designed to provide a delightful food ex
 ## Tech Stack
 - Frontend: React
 - Styling: Sass
-- Icons: 
+- Icons: Fontawesome
 
 ## Getting Started
 

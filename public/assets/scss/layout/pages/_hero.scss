@@ -2,10 +2,10 @@
 
 .ts-hero-area {
   position: relative;
+  overflow: hidden;
   background: url(..//..//..//img/hero/hero-bg.jpg) no-repeat center center /
     cover;
   display: block;
-  overflow: hidden;
   z-index: 1;
   @media #{$lg-m} {
     padding-top: 55px;
@@ -21,6 +21,7 @@
 .ts-hero-title {
   position: relative;
   margin-right: 30px;
+  text-transform: uppercase;
   color: var(--ts-white);
   background: rgb(181, 43, 29);
   background: linear-gradient(
