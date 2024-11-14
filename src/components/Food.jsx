@@ -28,9 +28,8 @@ const Food = () => {
                 </div>
             </div>
             <div className="container">
-                <div className="row">
+                <div className="row g-4">
                
-                        
                         <div className="col-xl-3 col-lg-6 col-md-12">
                         <div className="tsfood text-center">
                         <div className="tsfood__thumb mb_20">
@@ -83,7 +82,6 @@ const Food = () => {
                         </div>
                         </div>
                     </div>
-                    
                     
                 </div>
             </div>

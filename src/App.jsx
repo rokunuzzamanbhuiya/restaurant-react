@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import About from './components/About'
 import Food from './components/Food'
+import Book from './components/Book'
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <About />
       <Food />
+      <Book />
 
       
       <Footer/>
