@@ -3,18 +3,19 @@
 **Application Live Link** <br>
 https://res-taurant-react.netlify.app/
 
-A modern and responsive web application designed to provide a delightful food experience. This project was built with React and includes various UI/UX enhancements using Bootstrap, Sass.
+A Modern and Responsive web application designed to provide a delightful food experience. This Website was built with React and includes various UI/UX enhancements using Bootstrap, Sass.
 
 ## Features
 - Responsive layout with a sticky header section.
 - The About section has a working tab with relevant content.
 - For Carousel autoplay has been enabled and loop with duplicated items.
-- The testimonials section has a slider with a slide effect.
+- The Testimonials section has a slider with a slide effect.
 
 ## Tech Stack
-- Frontend: React
-- Styling: Sass
-- Icons: Fontawesome
+- React
+- Bootstrap
+- Sass
+- Fontawesome
 
 ## Getting Started
 
