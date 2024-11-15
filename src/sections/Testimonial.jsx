@@ -1,4 +1,5 @@
 
+import VideoPopup from '../components/VideoPopup'
 
 const Testimonial = () => {
     return (
@@ -35,11 +36,7 @@ const Testimonial = () => {
                       <div className="col-xl-7">
                         <div className="ts-testimonial-thumb">
                           <img src="assets/img/testimonial/testimonial-bg-video1.jpg" alt="Restaurant" />
-                          <div className="ts-testimonial-play-btn">
-                            <a className="popup-video" href="https://www.youtube.com/watch?v=TfU0qjuZkJ4">
-                              <i className="fas fa-play" />
-                            </a>
-                          </div>
+                            <VideoPopup />
                         </div>
                       </div>
                       <div className="col-xl-5">
@@ -71,11 +68,7 @@ const Testimonial = () => {
                       <div className="col-xl-7">
                         <div className="ts-testimonial-thumb">
                           <img src="assets/img/testimonial/testimonial-bg-video2.jpg" alt="Restaurant" />
-                          <div className="ts-testimonial-play-btn">
-                            <a className="popup-video" href="https://www.youtube.com/watch?v=TfU0qjuZkJ4">
-                              <i className="fas fa-play" />
-                            </a>
-                          </div>
+                            <VideoPopup />
                         </div>
                       </div>
                       <div className="col-xl-5">
@@ -108,11 +101,7 @@ const Testimonial = () => {
                       <div className="col-xl-7">
                         <div className="ts-testimonial-thumb">
                           <img src="assets/img/testimonial/testimonial-bg-video3.jpg" alt="Restaurant" />
-                          <div className="ts-testimonial-play-btn">
-                            <a className="popup-video" href="https://www.youtube.com/watch?v=TfU0qjuZkJ4">
-                              <i className="fas fa-play" />
-                            </a>
-                          </div>
+                            <VideoPopup />
                         </div>
                       </div>
                       <div className="col-xl-5">

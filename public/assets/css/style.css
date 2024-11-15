@@ -1964,6 +1964,7 @@ input[type=date]:focus {
   position: absolute;
   top: 40%;
   left: 40%;
+  cursor: pointer;
   transform: translate(50%, 50%);
 }
 @media (max-width: 575.98px) {
