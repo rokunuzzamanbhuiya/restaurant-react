@@ -8,6 +8,8 @@ A Modern and Responsive web application designed to provide a delightful food ex
 ## Features
 - Responsive layout with a sticky header section.
 - The About section has a working tab with relevant content.
+- For Carousel autoplay has been enabled and loop with duplicated items.
+- The Testimonials section has slider with slide effect.
 
 ## Tech Stack
 - React

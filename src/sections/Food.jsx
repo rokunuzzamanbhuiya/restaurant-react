@@ -72,7 +72,7 @@ const Food = () => {
               spaceBetween={30}
               navigation={false}
               modules={[Autoplay, Navigation]}
-              autoplay={{ delay: 5000 }}
+              autoplay={{ delay: 2000 }}
               className="mySwiper"
             >
               <SwiperSlide>

@@ -70,7 +70,10 @@ const Testimonial = () => {
               swiper.navigation.update();
             }}
             modules={[Autoplay, EffectCreative]}
-            autoplay={{ delay: 4000 }}
+            autoplay={{
+              delay: 3000,
+              pauseOnMouseEnter: true,
+            }}
             grabCursor={true}
             effect={"creative"}
             creativeEffect={{
