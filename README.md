@@ -15,7 +15,14 @@ A Modern and Responsive web application designed to provide a delightful food ex
 - React
 - Bootstrap
 - Sass
-- Fontawesome
+- Fontawesome Icons
+- CSS Animation
+- Hover Effect
+- Preloader
+- Scroll Up Button
+- Custom Cursor
+- Blog Section Design
+- Clean & Commented Code
 
 ## Getting Started
 

@@ -1,14 +1,14 @@
 
 import './App.css'
 
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import About from './components/About'
-import Food from './components/Food'
-import Book from './components/Book'
-import Testimonial from './components/Testimonial'
-import Blog from './components/Blog'
+import Header from './sections/Header'
+import Footer from './sections/Footer'
+import Hero from './sections/Hero'
+import About from './sections/About'
+import Food from './sections/Food'
+import Book from './sections/Book'
+import Testimonial from './sections/Testimonial'
+import Blog from './sections/Blog'
 
 
 
