@@ -47,7 +47,7 @@ Make sure you have the following installed on your machine:
 
 3. **Running the Project Locally** <br>
     ```bash
-    npm start
+    npm run dev
 
 4. **Open your browser and go to:** <br>
     ```bash
