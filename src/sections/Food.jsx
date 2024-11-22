@@ -46,7 +46,7 @@ const Food = () => {
           </div>
         </div>
         <div className="container">
-          <div className="row g-4">
+          <div className="row">
             <Swiper
               onInit={(swiper) => {
                 swiper.params.navigation.prevEl = prevRef.current;
@@ -73,7 +73,7 @@ const Food = () => {
               navigation={false}
               modules={[Autoplay, Navigation]}
               autoplay={{ delay: 2000 }}
-              className="mySwiper"
+              className="mySwiper tsFoodSwiper"
             >
               <SwiperSlide>
                 <div className="tsfood text-center">

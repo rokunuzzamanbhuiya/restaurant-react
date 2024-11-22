@@ -1,20 +1,20 @@
 const Hero = () => {
   return (
     <>
-      <section className="ts-hero-area pt_238 pb_238">
+      <section className="ts-hero-area pt_234 pb_272">
         <div className="container">
           <div className="ts-hero-inner">
             <div className="row g-5">
               <div className="col-xl-8">
-                <div className="ts-hero-content mt_100">
-                  <h1 className="ts-hero-title">
+                <div className="ts-hero-content mt_120">
+                  <h1 className="ts-hero-title mb_10">
                     Taste the authentic Saudi cuisine
                   </h1>
                   <p className="ts-hero-paragraph">
                     Among the best Saudi chefs in the world, serving <br /> you
                     something beyond flavor.
                   </p>
-                  <div className="ts-hero-btn mt_50">
+                  <div className="ts-hero-btn mt_40">
                     <a className="ts-btn ts-btn-2" href="#">
                       <span className="ts-btn-wrap">
                         <span className="ts-btn-animate-y-1">EXPLORE MENU</span>

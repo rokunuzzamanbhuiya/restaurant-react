@@ -9,7 +9,7 @@ const About = () => {
         />
         <div className="ts-about-top">
           <div className="container">
-            <div className="row g-5">
+            <div className="row g-0 g-xl-5">
               <div className="col-xl-6">
                 <div className="ts-about-thumb">
                   <img src="assets/img/about/about-img.jpg" alt="Restaurant" />
@@ -167,7 +167,7 @@ const About = () => {
         </div>
         <div className="ts-about-bottom mt_75">
           <div className="container">
-            <div className="row g-5">
+            <div className="row g-md-5 g-4">
               <div className="col-xl-4 col-lg-6 col-md-12">
                 <div className="tsabout d-flex align-items-center">
                   <div className="tsabout__icon">

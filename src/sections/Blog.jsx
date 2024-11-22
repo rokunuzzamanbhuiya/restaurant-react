@@ -2,11 +2,17 @@ const Blog = () => {
   return (
     <>
       <section id="blog" className="ts-blog-area pt_120 pb_120">
-        <div className="ts-section-title-wrapper text-center mb_60">
-          <span className="ts-section-subtitle">Our Latest Blog</span>
-          <h2 className="ts-section-title">
-            Experience and Delicious Food Blog
-          </h2>
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-12">
+              <div className="ts-section-title-wrapper text-center mb_60">
+                <span className="ts-section-subtitle">Our Latest Blog</span>
+                <h2 className="ts-section-title">
+                  Experience and Delicious Food Blog
+                </h2>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="container">
           <div className="row g-5">

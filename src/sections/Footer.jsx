@@ -2,14 +2,20 @@ const Footer = () => {
   return (
     <>
       <footer id="footer" className="ts-footer-bg pt_120 pb_100">
-        <div className="ts-section-title-wrapper text-center mb_40">
-          <h2 className="ts-section-title ts-section-title-white">
-            We ready to have you the best dining experiences
-          </h2>
-        </div>
         <div className="ts-footer-top">
           <div className="container">
-            <div className="row g-5">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="ts-section-title-wrapper ts-footer-section-title-wrapper text-center">
+                  <h2 className="ts-section-title ts-section-title-white">
+                    We ready to have you the best dining experiences
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="row g-lg-5 g-4">
               <div className="col-xl-3 col-lg-6 col-md-12">
                 <div className="tsfooter text-center">
                   <div className="tsfooter__icon mb_22">

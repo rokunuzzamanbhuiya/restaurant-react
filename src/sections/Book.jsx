@@ -5,18 +5,18 @@ const Book = () => {
         <div className="container">
           <div className="row">
             <div className="col-xl-6">
-              <div className="ts-section-title-wrapper mb_16">
+              <div className="ts-section-title-wrapper">
                 <span className="ts-section-subtitle">Book Now</span>
                 <h2 className="ts-section-title ts-section-title-white">
                   Book Your Table
                 </h2>
+                <p className="ts-book-paragraph mt_16 mb_40">
+                  Enim tempor eget pharetra facilisis sed maecenas adipiscing.
+                  Eu leo molestie vel, ornare non id blandit netus.
+                </p>
               </div>
-              <p className="ts-book-paragraph mb_40">
-                Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu
-                leo molestie vel, ornare non id blandit netus.
-              </p>
               <div className="ts-book-form">
-                <form id="contact-form" action="#" method="POST">
+                <form id="contact-form" action="#mailphp" method="POST">
                   <div className="row">
                     <div className="col-md-6">
                       <input
@@ -64,7 +64,7 @@ const Book = () => {
                       />
                     </div>
                     <div className="col-xl-12">
-                      <button type="submit" className="ts-btn">
+                      <button type="submit" className="ts-btn ts-btn-2">
                         <span className="ts-btn-wrap">
                           <span className="ts-btn-animate-y-1">BOOK NOW</span>
                           <span className="ts-btn-animate-y-2">BOOK NOW</span>

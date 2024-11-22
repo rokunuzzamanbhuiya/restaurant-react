@@ -4,20 +4,29 @@
   position: relative;
   background-color: var(--ts-theme-color);
   color: #0a1425;
-  padding: 10px 36px;
+  padding: 9px 23px 7px;
   font-size: 16px;
   font-weight: 700;
   font-family: var(--ts-font-body);
   display: inline-block;
   overflow: hidden;
   z-index: 5;
+
   &-2 {
-    padding: 14px 40px;
+    padding: 16px 23px 14px;
+    font-size: 18px;
+    font-weight: 700;
+    @media #{$xs-m} {
+      padding: 12px 20px;
+      font-size: 16px;
+    }
   }
 
   &-wrap {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     & span {
       display: block;

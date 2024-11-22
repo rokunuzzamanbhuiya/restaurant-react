@@ -22,30 +22,30 @@
 		2.2 Buttons
 		2.3 Animations
 		2.4 Preloader
-		2.5 Offcanvasb
+		2.5 Offcanvas
 		2.6 Section Title
+    2.7 Mobile Menu
+		2.8 Cursor
 
 	-----------------
     03. HEADER CSS
 	-----------------
 		3.1 Header Style
 
-
 	---------------------------------
 	04. FOOTER CSS
 	---------------------------------
 		4.1 Footer Style
 
-
 	---------------------------------
 	05. PAGES CSS
 	---------------------------------
-		5.1 Slider css
+		5.1 Hero css
 		5.2 About css
-		5.3 Testimonial css
-		5.4 Contact css
-		5.5 Error css
-		5.6 Profile css
+		5.3 Food css
+		5.4 Book css
+		5.5 Testimonial css
+		5.6 Blog css
 
 
 **********************************************/
@@ -246,7 +246,7 @@ textarea {
 
 .container {
   @media #{$lg-m} {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
