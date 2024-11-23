@@ -131,7 +131,7 @@ const About = () => {
                         tabIndex={0}
                       >
                         <h2 className="ts-about-title mb_15">
-                          Exceptional culinary nice and delicious food
+                          Exceptional culinary nice and delicious food corner
                         </h2>
                         <p>
                           Ornare non sed est cursus. Vel hac convallis ipsum,

@@ -1,19 +1,15 @@
+import "./App.css";
 
-import './App.css'
-
-import Header from './sections/Header'
-import Footer from './sections/Footer'
-import Hero from './sections/Hero'
-import About from './sections/About'
-import Food from './sections/Food'
-import Book from './sections/Book'
-import Testimonial from './sections/Testimonial'
-import Blog from './sections/Blog'
-
-
+import Header from "./sections/Header";
+import Footer from "./sections/Footer";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Food from "./sections/Food";
+import Book from "./sections/Book";
+import Testimonial from "./sections/Testimonial";
+import Blog from "./sections/Blog";
 
 function App() {
-
   return (
     <>
       <Header />
@@ -24,10 +20,10 @@ function App() {
       <Book />
       <Testimonial />
       <Blog />
-      
-      <Footer/>
+
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
