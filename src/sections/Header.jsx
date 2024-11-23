@@ -1,4 +1,23 @@
+import { useEffect, useState } from "react";
+
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false); // Track if the menu is open
+
+  const toggleOffCanvas = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    // Check if the menu has been shown before in localStorage
+    const menuShown = localStorage.getItem("menuShown");
+
+    if (!menuShown) {
+      // If it hasn't been shown, open the menu and store the flag in localStorage
+      setIsOpen(true);
+      localStorage.setItem("menuShown", "true"); // Mark the menu as shown
+    }
+  }, []);
+
   return (
     <>
       <header>
@@ -55,7 +74,7 @@ const Header = () => {
                     </a>
                   </div>
                   <div className="ts-offcanvas-toogle d-flex d-xl-none justify-content-end">
-                    <i className="far fa-bars" />
+                    <i className="far fa-bars" onClick={toggleOffCanvas} />
                   </div>
                 </div>
               </div>
@@ -64,8 +83,8 @@ const Header = () => {
         </div>
       </header>
 
-      {/* ==========OffcanvasArea Starts Here========== */}
-      <div className="ts-offcanvas">
+      {/* Offcanvas Area */}
+      <div className={`ts-offcanvas ${isOpen ? "ts-offcanvas-open" : ""}`}>
         <div className="ts-offcanvas-wrapper">
           <div className="ts-offcanvas-header d-flex justify-content-between align-items-center mb_40">
             <div className="ts-offcanvas-logo">
@@ -74,40 +93,50 @@ const Header = () => {
               </a>
             </div>
             <div className="ts-offcanvas-close">
-              <button className="ts-offcanvas-close-toggle">
+              <button
+                className="ts-offcanvas-close-toggle"
+                onClick={toggleOffCanvas}
+              >
                 <i className="far fa-times" />
               </button>
             </div>
           </div>
           <div className="ts-offcanvas-menu mb_50">
             <nav>
-              {/* Here Menu Will Come Automatically Via Javascript / Same Menu as in Header */}
+              <ul>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#food">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#testimonial">Clients</a>
+                </li>
+                <li>
+                  <a href="#blog">Blog</a>
+                </li>
+                <li>
+                  <a href="#footer">Contact</a>
+                </li>
+              </ul>
             </nav>
           </div>
           <h3 className="ts-offcanvas-sm-title">Gallery</h3>
           <div className="ts-offcanvas-gallery mb_50">
-            <a
-              className="popup-image"
-              href="assets/img/header/showcase-thumb-01.jpg"
-            >
+            <a className="popup-image" href="#">
               <img src="assets/img/header/showcase-thumb-01.jpg" alt="Soten" />
             </a>
-            <a
-              className="popup-image"
-              href="assets/img/header/showcase-thumb-02.jpg"
-            >
+            <a className="popup-image" href="#">
               <img src="assets/img/header/showcase-thumb-02.jpg" alt="Soten" />
             </a>
-            <a
-              className="popup-image"
-              href="assets/img/header/showcase-thumb-03.jpg"
-            >
+            <a className="popup-image" href="#">
               <img src="assets/img/header/showcase-thumb-03.jpg" alt="Soten" />
             </a>
-            <a
-              className="popup-image"
-              href="assets/img/header/showcase-thumb-04.jpg"
-            >
+            <a className="popup-image" href="#">
               <img src="assets/img/header/showcase-thumb-04.jpg" alt="Soten" />
             </a>
           </div>
@@ -137,7 +166,7 @@ const Header = () => {
             </a>
           </div>
           <div className="ts-offcanvas-btn mb_40">
-            <a className="ts-btn" href="#">
+            <a className="ts-btn" href="#book">
               <span className="ts-btn-wrap">
                 <span className="ts-btn-animate-y-1">BOOK A TABLE</span>
                 <span className="ts-btn-animate-y-2">BOOK A TABLE</span>
@@ -146,8 +175,13 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="ts-offcanvas-overlay" />
-      {/* ==========OffcanvasArea Ends Here========== */}
+      <div
+        className={`ts-offcanvas-overlay ${
+          isOpen ? "ts-offcanvas-overlay-open" : ""
+        }`}
+        onClick={toggleOffCanvas}
+      />
+      {/* End of Offcanvas Area */}
     </>
   );
 };
