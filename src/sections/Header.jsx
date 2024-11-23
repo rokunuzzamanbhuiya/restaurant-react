@@ -130,29 +130,29 @@ const Header = () => {
           <div className="ts-offcanvas-gallery mb_50">
             <a className="popup-image" href="#">
               <ModalImage
-                small={"../../public/assets/img/header/showcase-thumb-01.jpg"}
-                large={"../../public/assets/img/header/showcase-thumb-01.jpg"}
+                small={"assets/img/header/showcase-thumb-01.jpg"}
+                large={"assets/img/header/showcase-thumb-01.jpg"}
                 alt="Gallery Image"
               />
             </a>
             <a className="popup-image" href="#">
               <ModalImage
-                small={"../../public/assets/img/header/showcase-thumb-02.jpg"}
-                large={"../../public/assets/img/header/showcase-thumb-02.jpg"}
+                small={"assets/img/header/showcase-thumb-02.jpg"}
+                large={"assets/img/header/showcase-thumb-02.jpg"}
                 alt="Gallery Image"
               />
             </a>
             <a className="popup-image" href="#">
               <ModalImage
-                small={"../../public/assets/img/header/showcase-thumb-03.jpg"}
-                large={"../../public/assets/img/header/showcase-thumb-03.jpg"}
+                small={"assets/img/header/showcase-thumb-03.jpg"}
+                large={"assets/img/header/showcase-thumb-03.jpg"}
                 alt="Gallery Image"
               />
             </a>
             <a className="popup-image" href="#">
               <ModalImage
-                small={"../../public/assets/img/header/showcase-thumb-04.jpg"}
-                large={"../../public/assets/img/header/showcase-thumb-04.jpg"}
+                small={"assets/img/header/showcase-thumb-04.jpg"}
+                large={"assets/img/header/showcase-thumb-04.jpg"}
                 alt="Gallery Image"
               />
             </a>
