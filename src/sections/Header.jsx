@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ModalImage from "react-modal-image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false); // Track if the menu is open
@@ -128,16 +129,32 @@ const Header = () => {
           <h3 className="ts-offcanvas-sm-title">Gallery</h3>
           <div className="ts-offcanvas-gallery mb_50">
             <a className="popup-image" href="#">
-              <img src="assets/img/header/showcase-thumb-01.jpg" alt="Soten" />
+              <ModalImage
+                small={"../../public/assets/img/header/showcase-thumb-01.jpg"}
+                large={"../../public/assets/img/header/showcase-thumb-01.jpg"}
+                alt="Gallery Image"
+              />
             </a>
             <a className="popup-image" href="#">
-              <img src="assets/img/header/showcase-thumb-02.jpg" alt="Soten" />
+              <ModalImage
+                small={"../../public/assets/img/header/showcase-thumb-02.jpg"}
+                large={"../../public/assets/img/header/showcase-thumb-02.jpg"}
+                alt="Gallery Image"
+              />
             </a>
             <a className="popup-image" href="#">
-              <img src="assets/img/header/showcase-thumb-03.jpg" alt="Soten" />
+              <ModalImage
+                small={"../../public/assets/img/header/showcase-thumb-03.jpg"}
+                large={"../../public/assets/img/header/showcase-thumb-03.jpg"}
+                alt="Gallery Image"
+              />
             </a>
             <a className="popup-image" href="#">
-              <img src="assets/img/header/showcase-thumb-04.jpg" alt="Soten" />
+              <ModalImage
+                small={"../../public/assets/img/header/showcase-thumb-04.jpg"}
+                large={"../../public/assets/img/header/showcase-thumb-04.jpg"}
+                alt="Gallery Image"
+              />
             </a>
           </div>
           <div className="ts-offcanvas-info mb_40">
@@ -148,7 +165,7 @@ const Header = () => {
             <span>
               <a href="mailto:contact@example.com">contact@example.com</a>
             </span>
-            <span>North Tower, Toronto, Canada</span>
+            <span>North Tower, Toronto, America</span>
           </div>
           <div className="ts-offcanvas-social mb_40">
             <h3 className="ts-offcanvas-sm-title">Follow Us</h3>

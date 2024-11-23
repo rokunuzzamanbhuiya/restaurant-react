@@ -18,6 +18,7 @@ A Modern and Responsive web application designed to provide a delightful food ex
 - Fontawesome Icons
 - CSS Animation
 - Hover Effect
+- Image & Video Popup 
 - Mobile Drawer Menu
 - Preloader
 - Scroll Up Button

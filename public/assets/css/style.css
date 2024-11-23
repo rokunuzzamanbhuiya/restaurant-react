@@ -1777,6 +1777,7 @@ img {
   text-align: center;
   box-shadow: 0px 0px 13.6364px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  cursor: pointer;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -1806,6 +1807,7 @@ img {
   text-align: center;
   box-shadow: 0px 0px 13.6364px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  cursor: pointer;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -2131,6 +2133,7 @@ input[type=date]:focus {
   text-align: center;
   box-shadow: 0px 0px 13.6364px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  cursor: pointer;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
@@ -2160,6 +2163,7 @@ input[type=date]:focus {
   text-align: center;
   box-shadow: 0px 0px 13.6364px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  cursor: pointer;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;

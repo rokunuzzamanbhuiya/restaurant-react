@@ -1,4 +1,4 @@
-(function ($) {
+(function () {
   ("use strict");
 
   /*
@@ -12,169 +12,212 @@
 	=    		Preloader			      =
 =============================================*/
   function preloader() {
-    $("#preloader").delay(0).fadeOut();
+    document.getElementById("preloader").style.display = "none";
   }
 
-  $(window).on("load", function () {
+  window.addEventListener("load", function () {
     preloader();
   });
 
   /*=============================================
 	=        Mouse Active          =
 =============================================*/
-  $(".slider-drag").on("mouseenter", function () {
-    $(".mouseCursor").addClass("cursor-big");
-  });
-  $(".slider-drag").on("mouseleave", function () {
-    $(".mouseCursor").removeClass("cursor-big");
+  const sliderDrag = document.querySelectorAll(".slider-drag");
+  const mouseCursor = document.querySelector(".mouseCursor");
+
+  sliderDrag.forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      mouseCursor.classList.add("cursor-big");
+    });
+    element.addEventListener("mouseleave", () => {
+      mouseCursor.classList.remove("cursor-big");
+    });
   });
 
-  $("a,.sub-menu,button").on("mouseenter", function () {
-    $(".mouseCursor").addClass("opacity-0");
-  });
-  $("a,.sub-menu,button").on("mouseleave", function () {
-    $(".mouseCursor").removeClass("opacity-0");
+  const interactiveElements = document.querySelectorAll("a, .sub-menu, button");
+
+  interactiveElements.forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      mouseCursor.classList.add("opacity-0");
+    });
+    element.addEventListener("mouseleave", () => {
+      mouseCursor.classList.remove("opacity-0");
+    });
   });
 
-  //Mouse Custom Cursor
+  // Mouse Custom Cursor
   function itCursor() {
-    var myCursor = jQuery(".mouseCursor");
-    if (myCursor.length) {
-      if ($("body")) {
-        const e = document.querySelector(".cursor-inner"),
-          t = document.querySelector(".cursor-outer");
-        let n,
-          i = 0,
-          o = !1;
-        (window.onmousemove = function (s) {
-          o ||
-            (t.style.transform =
-              "translate(" + s.clientX + "px, " + s.clientY + "px)"),
-            (e.style.transform =
-              "translate(" + s.clientX + "px, " + s.clientY + "px)"),
-            (n = s.clientY),
-            (i = s.clientX);
-        }),
-          $("body").on("mouseenter", "button, a, .cursor-pointer", function () {
-            e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
-          }),
-          $("body").on("mouseleave", "button, a, .cursor-pointer", function () {
-            ($(this).is("a", "button") &&
-              $(this).closest(".cursor-pointer").length) ||
-              (e.classList.remove("cursor-hover"),
-              t.classList.remove("cursor-hover"));
-          }),
-          (e.style.visibility = "visible"),
-          (t.style.visibility = "visible");
-      }
+    const cursorInner = document.querySelector(".cursor-inner");
+    const cursorOuter = document.querySelector(".cursor-outer");
+
+    if (cursorInner && cursorOuter) {
+      document.body.addEventListener("mousemove", (e) => {
+        cursorInner.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        cursorOuter.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      });
+
+      document.body.addEventListener("mouseenter", (e) => {
+        if (e.target.matches("button, a, .cursor-pointer")) {
+          cursorInner.classList.add("cursor-hover");
+          cursorOuter.classList.add("cursor-hover");
+        }
+      });
+
+      document.body.addEventListener("mouseleave", (e) => {
+        if (e.target.matches("button, a, .cursor-pointer")) {
+          cursorInner.classList.remove("cursor-hover");
+          cursorOuter.classList.remove("cursor-hover");
+        }
+      });
+
+      cursorInner.style.visibility = "visible";
+      cursorOuter.style.visibility = "visible";
     }
   }
   itCursor();
 
-  /*=============================================
-	=    		3. Mobile Menu			      =
-=============================================*/
-  // offcanvas toogle
-  $(".ts-offcanvas-toogle").on("click", function () {
-    $(".ts-offcanvas").addClass("ts-offcanvas-open");
-    $(".ts-offcanvas-overlay").addClass("ts-offcanvas-overlay-open");
-  });
-  $(".ts-offcanvas-close-toggle,.ts-offcanvas-overlay,.ts-click-close").on(
-    "click",
-    function () {
-      $(".ts-offcanvas").removeClass("ts-offcanvas-open");
-      $(".ts-offcanvas-overlay").removeClass("ts-offcanvas-overlay-open");
-    }
-  );
+  //   /*=============================================
+  // 	=    		Mobile Menu			      =
+  // =============================================*/
+  //   // Offcanvas toggle
+  //   document
+  //     .querySelector(".ts-offcanvas-toogle")
+  //     ?.addEventListener("click", () => {
+  //       document
+  //         .querySelector(".ts-offcanvas")
+  //         .classList.add("ts-offcanvas-open");
+  //       document
+  //         .querySelector(".ts-offcanvas-overlay")
+  //         .classList.add("ts-offcanvas-overlay-open");
+  //     });
 
-  // mobile menu
-  var tsMenuWrap = $(".ts-mobile-menu-active > ul").clone();
-  var tsSideMenu = $(".ts-offcanvas-menu nav");
-  tsSideMenu.append(tsMenuWrap);
-  if ($(tsSideMenu).find(".sub-menu, .ts-mega-menu").length != 0) {
-    $(tsSideMenu)
-      .find(".sub-menu, .ts-mega-menu")
-      .parent()
-      .append(
-        '<button class="ts-menu-close"><i class="fas fa-chevron-right"></i></button>'
-      );
-  }
+  //   document
+  //     .querySelectorAll(
+  //       ".ts-offcanvas-close-toggle, .ts-offcanvas-overlay, .ts-click-close"
+  //     )
+  //     .forEach((element) => {
+  //       element.addEventListener("click", () => {
+  //         document
+  //           .querySelector(".ts-offcanvas")
+  //           .classList.remove("ts-offcanvas-open");
+  //         document
+  //           .querySelector(".ts-offcanvas-overlay")
+  //           .classList.remove("ts-offcanvas-overlay-open");
+  //       });
+  //     });
 
-  var sideMenuList = $(
-    ".ts-offcanvas-menu nav > ul > li button.ts-menu-close, .ts-offcanvas-menu nav > ul li.has-dropdown > a"
-  );
-  $(sideMenuList).on("click", function (e) {
-    e.preventDefault();
-    if (!$(this).parent().hasClass("active")) {
-      $(this).parent().addClass("active");
-      $(this).siblings(".sub-menu, .ts-mega-menu").slideDown();
-    } else {
-      $(this).siblings(".sub-menu, .ts-mega-menu").slideUp();
-      $(this).parent().removeClass("active");
-    }
-  });
+  //   // Mobile menu
+  //   const tsMenuWrap = document
+  //     .querySelector(".ts-mobile-menu-active > ul")
+  //     ?.cloneNode(true);
+  //   const tsSideMenu = document.querySelector(".ts-offcanvas-menu nav");
+
+  //   if (tsSideMenu && tsMenuWrap) {
+  //     tsSideMenu.appendChild(tsMenuWrap);
+
+  //     const subMenus = tsSideMenu.querySelectorAll(".sub-menu, .ts-mega-menu");
+
+  //     subMenus.forEach((menu) => {
+  //       const button = document.createElement("button");
+  //       button.className = "ts-menu-close";
+  //       button.innerHTML = '<i class="fas fa-chevron-right"></i>';
+  //       menu.parentElement.appendChild(button);
+  //     });
+
+  //     const sideMenuList = tsSideMenu.querySelectorAll(
+  //       "button.ts-menu-close, li.has-dropdown > a"
+  //     );
+
+  //     sideMenuList.forEach((menuItem) => {
+  //       menuItem.addEventListener("click", (e) => {
+  //         e.preventDefault();
+  //         const parent = menuItem.parentElement;
+
+  //         if (!parent.classList.contains("active")) {
+  //           parent.classList.add("active");
+  //           parent.querySelector(".sub-menu, .ts-mega-menu").style.display =
+  //             "block";
+  //         } else {
+  //           parent.classList.remove("active");
+  //           parent.querySelector(".sub-menu, .ts-mega-menu").style.display =
+  //             "none";
+  //         }
+  //       });
+  //     });
+  //   }
 
   /*=============================================
   	=    Menu sticky      =
   =============================================*/
-  $(window).on("scroll", function () {
-    var scroll = $(window).scrollTop();
-    if (scroll < 245) {
-      $("#ts-sticky-header").removeClass("ts-sticky-menu");
-    } else {
-      $("#ts-sticky-header").addClass("ts-sticky-menu");
+  window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    const stickyHeader = document.getElementById("ts-sticky-header");
+
+    if (stickyHeader) {
+      if (scroll < 245) {
+        stickyHeader.classList.remove("ts-sticky-menu");
+      } else {
+        stickyHeader.classList.add("ts-sticky-menu");
+      }
     }
   });
 
   /*=============================================
   	=    Scroll to top      =
   =============================================*/
-  $(window).on("scroll", function () {
-    var scroll = $(window).scrollTop();
-    if (scroll < 245) {
-      $(".scroll-to-target").removeClass("open");
-    } else {
-      $(".scroll-to-target").addClass("open");
+  window.addEventListener("scroll", () => {
+    const scroll = window.scrollY;
+    const scrollToTarget = document.querySelector(".scroll-to-target");
+
+    if (scrollToTarget) {
+      if (scroll < 245) {
+        scrollToTarget.classList.remove("open");
+      } else {
+        scrollToTarget.classList.add("open");
+      }
     }
   });
 
   /*=============================================
-  	=    		Scroll Up  	         =
-  =============================================*/
-  if ($(".scroll-to-target").length) {
-    $(".scroll-to-target").on("click", function () {
-      var target = $(this).attr("data-target");
-      // animate
-      $("html, body").animate(
-        {
-          scrollTop: $(target).offset().top,
-        },
-        1000
-      );
+	=    		Scroll Up  	         =
+=============================================*/
+  const scrollToTarget = document.querySelector(".scroll-to-target");
+
+  if (scrollToTarget) {
+    scrollToTarget.addEventListener("click", () => {
+      const targetId = scrollToTarget.getAttribute("data-target");
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop,
+          behavior: "smooth",
+        });
+      }
     });
   }
 
   /*=============================================
 	=       Data Background Image 		      =
 =============================================*/
-  $("[data-background]").each(function () {
-    $(this).css(
-      "background-image",
-      "url(" + $(this).attr("data-background") + ")"
-    );
+  document.querySelectorAll("[data-background]").forEach((element) => {
+    const bg = element.getAttribute("data-background");
+    if (bg) element.style.backgroundImage = `url(${bg})`;
   });
 
   /*=============================================
 	=       Data Background Color 		      =
 =============================================*/
-  $("[data-bg-color]").each(function () {
-    $(this).css("background-color", $(this).attr("data-bg-color"));
+  document.querySelectorAll("[data-bg-color]").forEach((element) => {
+    const bgColor = element.getAttribute("data-bg-color");
+    if (bgColor) element.style.backgroundColor = bgColor;
   });
 
   /*=============================================
 	=       Data Color 		      =
 =============================================*/
-  $("[data-color]").each(function () {
-    $(this).css("color", $(this).attr("data-color"));
+  document.querySelectorAll("[data-color]").forEach((element) => {
+    const color = element.getAttribute("data-color");
+    if (color) element.style.color = color;
   });
-})(jQuery);
+})();
